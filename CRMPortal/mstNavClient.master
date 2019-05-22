@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/mstDefault.Master" AutoEventWireup="true" CodeBehind="mstNavClient.master.cs" Inherits="CRMPortal.mstNavClient" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="mstDefaultHead" runat="server">
+    <style>
+        .container-fluid {
+        width: 75%;
+        }
+        /*.row {
+            width: 75%;
+    margin: 0 auto;
+    float: none;
+        }*/
+        .well {
+            padding: 0px 19px;
+        }
+        h4, .h4, h5, .h5, h6, .h6 {
+        margin-bottom: -11px;
+        }
+        .panel-heading {
+            padding: 0px 15px;
+        }
+        body {
+        background:none;
+        }
+        .navbar-purple .navbar-brand,.navbar-purple .navbar-brand:hover {
+            color: #337ab7;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background: none;
+            }
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="mstNavClientHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mstDefaultBody" runat="server">
+    <nav class="navbar navbar-purple">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Jay | CRM Portal</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <asp:HyperLink ID="hlFeedbackForm" runat="server" Text="Feedback"></asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:HyperLink ID="hlConfigureation" runat="server" Text="Configuration"></asp:HyperLink>
+                    </li>
+                    <li>
+                        <asp:LinkButton ID="lnkSignout" runat="server" Text="Signout" OnClick="lnkSignout_Click" ValidationGroup="GRP99"></asp:LinkButton>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <asp:Literal ID="ltrNotificationArea" runat="server"></asp:Literal>
+            <asp:ContentPlaceHolder ID="mstNavClientBody" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>

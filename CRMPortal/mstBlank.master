@@ -1,0 +1,12 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/mstDefault.Master" AutoEventWireup="true" CodeBehind="mstBlank.master.cs" Inherits="CRMPortal.mstBlank" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="mstDefaultHead" runat="server">
+    <asp:ContentPlaceHolder ID="mstBlankHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="mstDefaultBody" runat="server">    
+        <div class="container-fluid">
+            <div class="row">
+                <asp:ContentPlaceHolder ID="mstBlankBody" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>    
+</asp:Content>
